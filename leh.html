@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xyz/explore/leh</title>
+    <link rel="stylesheet" href="leh.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+    
+        <nav class="nav-bar">
+            <a href="homepage.html"><img src="" alt=""></a>
+            <div class="nav-links">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">EXPLORE</a></li>
+            </ul>
+            </div>
+        </nav>
+         <div class="text-box">
+        
+        <p>Click the button to toggle between dark and light mode for this page.</p>
+            
+        <button onclick="myFunction()">Toggle dark mode</button>
+            
+        <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+        </script>
+       <h1>Leh</h1>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolor et reiciendis eligendi sint rem cum iusto laudantium atque dicta vero quidem optio, quas reprehenderit debitis magni dolorum expedita mollitia!</p>
+    </div>
+    </section>
+    <section class="services">
+        
+        
+        <div class="row">
+            <div class="course-col">
+                <h3>Crime updates</h3>
+                <p class="commu">
+                    <div id="piechart"></div>
+
+                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+                    <script type="text/javascript">
+                    // Load google charts
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(drawChart);
+                    
+                    // Draw the chart and set the chart values
+                    function drawChart() {
+                      var data = google.visualization.arrayToDataTable([
+                      ['Task', 'Hours per Day'],
+                      ['Work', 8],
+                      ['Eat', 2],
+                      ['TV', 4],
+                      ['Gym', 2],
+                      ['Sleep', 8]
+                    ]);
+                    
+                      // Optional; add a title and set the width and height of the chart
+                      var options = {'title':'My Average Day', 'width':550, 'height':400};
+                    
+                      // Display the chart inside the <div> element with id="piechart"
+                      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                      chart.draw(data, options);
+                    }
+                    </script>
+
+                </p>
+            
+            </div>
+            <div class="course-col">
+                <div class="col2">
+                <h3>Service providers</h3>
+                <p class="commu">
+                   <ul>
+                   <li><a href="https://www.thrillophilia.com/cities/ladakh/tours?utm_source=google&utm_medium=%2Bladakh%20%2Btravel&utm_campaign=ET-001-Search-HI-BR-LD-Ladakh-SUV&utm_term=502955693507&utm_content=ET-001-A01-Search-Ladakh-SUV&gclid=Cj0KCQjw0umSBhDrARIsAH7FCocGH5g95_q6yp932dXmKwBoywzd3gcsiBjzmI3pEaXgD8YrWUCGv-waAvbcEALw_wcB">Thrillophilia</a> </li>
+                   <li><a href="https://indiantravelstore.in/leh-ladakh/?gclid=Cj0KCQjw0umSBhDrARIsAH7FCoeMtMYL4pIDLGb-7A54iPWCHY7-qUxXEnQzJcf0tbtJO-4TuJCKxyYaAqw_EALw_wcB">Indian travel store</a></li>
+                   <li><a href="https://www.ladakhtravelmart.com/">ladakhtraveltime</a></li>
+                   </ul>
+                </p>
+            </div>
+            </div>
+        </div>    
+    </section>
+</body>
+</html>
